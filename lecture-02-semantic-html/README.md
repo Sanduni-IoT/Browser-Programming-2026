@@ -1,46 +1,47 @@
-# Lecture 02 – Semantic HTML & Structure
+Lecture 02 – Semantic HTML & Structure
+1. What I implemented this lecture
+Organized personal information using a single <h1> and a logical header.
 
-## 1. What I implemented this lecture
-- 
-- 
-- 
+Created a portfolio section with images, captions, and an embedded YouTube video.
 
-## 2. Semantic decisions I made (REQUIRED)
+Added a "Skip to content" link and semantic navigation for better accessibility.
 
-Explain at least **three semantic choices** you made in your HTML.
+2. Semantic decisions I made (REQUIRED)
+Decision 1
+Element(s) used: <figure> and <figcaption>
 
-### Decision 1
-- Element(s) used:
-- Where in the page:
-- Why this element is semantically correct:
+Where in the page: Inside the Portfolio section for project images and the YouTube video.
 
-### Decision 2
-- Element(s) used:
-- Where in the page:
-- Why this element is semantically correct:
+Why this element is semantically correct: It groups the media content with its description, making it clear to browsers that the text belongs specifically to that image or video.
 
-### Decision 3
-- Element(s) used:
-- Where in the page:
-- Why this element is semantically correct:
+Decision 2
+Element(s) used: <nav>
 
-*(Example: Why `<section>` instead of `<div>`, why `<article>` here, why this heading level, etc.)*
+Where in the page: At the top, containing the links to About, Portfolio, and Interests.
 
----
+Why this element is semantically correct: It identifies the major navigation block, allowing screen readers to quickly locate site links.
 
-## 3. Accessibility considerations
-- What accessibility features did you include?
-- How do they improve usability?
+Decision 3
+Element(s) used: <main> with id="main"
 
----
+Where in the page: Wrapping the core content between the header and the footer.
 
-## 4. What I learned
-- 
+Why this element is semantically correct: It marks the unique primary content of the page, which is essential for the "Skip to content" accessibility feature.
 
-## 5. What I still need to improve
-- 
+3. Accessibility considerations
+Skip Link: I added <a href="#main"> so keyboard users can skip the navigation and go straight to the content.
 
-## 6. Notes about AI usage (if any)
-- Tool used:
-- What I accepted as-is:
-- What I modified manually:
+Alt Text: Every image includes descriptive alt text to ensure users with visual impairments can understand the visuals.
+
+4. What I learned
+I learned how to use semantic landmarks like <header>, <main>, and <footer> to create a professional page structure.
+
+5. What I still need to improve
+I need to practice more with different media embedding techniques before we move to CSS styling.
+
+6. Notes about AI usage (if any)
+Tool used: Gemini
+
+What I accepted as-is: The semantic structure and the accessibility link logic.
+
+What I modified manually: All personal content, bio details, and specific interest lists.
