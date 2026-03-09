@@ -1,0 +1,72 @@
+/* =====================
+   GLOBAL & TYPOGRAPHY (Step 3)
+===================== */
+* { box-sizing: border-box; } /* From template */
+
+body {
+    font-family: system-ui, Arial, sans-serif; /* Step 3 */
+    line-height: 1.6; /* Step 3 */
+    color: #333;
+    margin: 0;
+}
+
+h1 { font-size: 2.5rem; } /* Step 3 */
+h2 { font-size: 1.8rem; } /* Step 3 */
+
+/* =====================
+   LAYOUT & SPACING (Step 4 & 8)
+===================== */
+main {
+    max-width: 900px; /* Step 8 */
+    margin: 0 auto;  /* Step 8: Center content */
+    padding: 24px;   /* Step 4: Padding */
+}
+
+section {
+    margin-bottom: 2rem; /* Step 4: Vertical spacing */
+}
+
+/* =====================
+   HEADER & FOOTER (Step 5)
+===================== */
+header, footer {
+    background-color: #f6f6f6; /* Step 5: Subtle background */
+    padding: 40px 20px;       /* Step 5: Padding */
+    text-align: center;
+}
+
+/* =====================
+   NAVIGATION (Step 6)
+===================== */
+nav ul {
+    list-style-type: none; /* Step 6: Remove bullets */
+    padding: 0;
+}
+
+nav li {
+    display: inline;       /* Step 6: Horizontal items */
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none; /* Step 6: Remove underline */
+    color: #007bff;
+}
+
+nav a:hover {
+    text-decoration: underline; /* Selector Practice: Pseudo-class */
+}
+
+/* =====================
+   RESPONSIVE IMAGES (Step 7)
+===================== */
+img {
+    max-width: 100%; /* Step 7: Mandatory */
+    height: auto;    /* Step 7: Mandatory */
+}
+
+/* =====================
+   SELECTOR PRACTICE (Step 2)
+===================== */
+#main { background: #fff; } /* ID Selector */
+.card p { color: #666; }    /* Descendant Selector */
