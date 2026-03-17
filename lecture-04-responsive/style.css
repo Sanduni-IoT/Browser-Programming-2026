@@ -1,0 +1,113 @@
+/* =====================
+GLOBAL & TYPOGRAPHY
+===================== */
+
+* { box-sizing: border-box; }
+
+body {
+font-family: system-ui, Arial, sans-serif;
+line-height: 1.6;
+color: #333;
+margin: 0;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 1.8rem; }
+
+/* =====================
+LAYOUT & SPACING
+===================== */
+main {
+max-width: 900px;
+margin: 0 auto;
+padding: 24px;
+}
+
+section {
+margin-bottom: 2rem;
+}
+
+/* =====================
+HEADER & FOOTER
+===================== */
+header, footer {
+background-color: #f6f6f6;
+padding: 40px 20px;
+text-align: center;
+}
+
+/* =====================
+NAVIGATION
+===================== */
+nav ul {
+list-style-type: none;
+padding: 0;
+}
+
+nav li {
+display: inline;
+margin-right: 20px;
+}
+
+nav a {
+text-decoration: none;
+color: #007bff;
+}
+
+nav a:hover {
+text-decoration: underline;
+}
+
+/* =====================
+RESPONSIVE IMAGES
+===================== */
+img {
+max-width: 100%;
+height: auto;
+}
+
+/* =====================
+SELECTOR PRACTICE
+===================== */
+#main { background: #fff; }
+
+.card p { color: #666; }
+
+/* =====================
+BUTTON STYLE (JavaScript Feature)
+===================== */
+button {
+padding: 8px 14px;
+margin: 10px;
+border: none;
+background-color: #007bff;
+color: white;
+cursor: pointer;
+border-radius: 4px;
+font-size: 14px;
+}
+
+button:hover {
+background-color: #0056b3;
+}
+
+/* =====================
+DARK MODE (JavaScript Feature)
+===================== */
+.dark-mode {
+background-color: #222;
+color: white;
+}
+
+.dark-mode header,
+.dark-mode footer {
+background-color: #111;
+}
+
+.dark-mode nav a {
+color: #4da3ff;
+}
+
+.dark-mode #main {
+background-color: #333;
+}
