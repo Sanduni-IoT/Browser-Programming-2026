@@ -1,0 +1,91 @@
+/* =====================
+SKILLS & PROJECTS
+===================== */
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    background-color: #e0e0e0;
+    margin: 6px 0;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.project {
+    border: 1px solid #ccc;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+}
+
+/* =====================
+EXTERNAL DATA SECTION
+===================== */
+
+#external-data {
+    margin-top: 40px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+}
+
+#external-data button {
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#status {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#user-data {
+    margin-top: 15px;
+}
+
+#user-data p {
+    margin: 5px 0;
+}
+
+/* =====================
+DARK MODE
+===================== */
+
+.dark {
+    background-color: #222;
+    color: white;
+}
+
+.dark header,
+.dark footer {
+    background-color: #111;
+}
+
+.dark nav a {
+    color: #4da3ff;
+}
+
+.dark #main {
+    background-color: #333;
+}
+
+/* Dark mode for external section */
+.dark #external-data {
+    background-color: #2a2a2a;
+    border-color: #555;
+}
+
+.dark #external-data button {
+    background-color: #444;
+    color: white;
+    border: 1px solid #666;
+}
+
+.dark #status {
+    color: #ddd;
+}
