@@ -1,51 +1,52 @@
-const cityText = document.getElementById("city");
-const temperatureText = document.getElementById("temperature");
-const windText = document.getElementById("wind");
-const output = document.getElementById("output");
+document.addEventListener("DOMContentLoaded", () => {
 
-function log(message) {
-    output.textContent += message + "\n";
-}
+    const btn = document.getElementById("btnKuopio");
 
-function clearOutput() {
-    output.textContent = "";
-}
+    const cityEl = document.getElementById("city");
+    const tempEl = document.getElementById("temperature");
+    const windEl = document.getElementById("wind");
+    const iconEl = document.getElementById("icon");
 
-document.getElementById("btnKuopio").onclick = function () {
-    loadWeatherByCity("Kuopio", 62.8924, 27.6770);
-};
+    btn.addEventListener("click", async () => {
 
-async function loadWeatherByCity(cityName, latitude, longitude) {
-    clearOutput();
+        const url = "https://api.open-meteo.com/v1/forecast?latitude=62.8924&longitude=27.6780&current_weather=true";
 
-    try {
-        const url =
-            "https://api.open-meteo.com/v1/forecast?latitude=" +
-            latitude +
-            "&longitude=" +
-            longitude +
-            "&current=temperature_2m,wind_speed_10m";
+        cityEl.textContent = "Loading...";
+        iconEl.textContent = "-";
 
-        const response = await fetch(url);
+        try {
+            const res = await fetch(url);
+            const data = await res.json();
 
-        if (!response.ok) {
-            throw new Error("HTTP Error: " + response.status);
+            const weather = data.current_weather;
+
+            cityEl.textContent = "Kuopio";
+            tempEl.textContent = weather.temperature + " °C";
+            windEl.textContent = weather.windspeed + " km/h";
+
+            // 🌤️ ICON LOGIC
+            const code = weather.weathercode;
+
+            if (code === 0) {
+                iconEl.textContent = "☀️ Sunny";
+            } 
+            else if (code >= 1 && code <= 3) {
+                iconEl.textContent = "⛅ Partly Cloudy";
+            } 
+            else if (code >= 45 && code <= 67) {
+                iconEl.textContent = "☁️ Cloudy";
+            } 
+            else if (code >= 71 && code <= 82) {
+                iconEl.textContent = "🌧 Rain";
+            } 
+            else {
+                iconEl.textContent = "🌡 Weather";
+            }
+
+        } catch (error) {
+            cityEl.textContent = "Error loading data";
+            iconEl.textContent = "❌";
         }
+    });
 
-        const data = await response.json();
-
-        const temperature = data.current.temperature_2m;
-        const wind = data.current.wind_speed_10m;
-
-        cityText.textContent = cityName;
-        temperatureText.textContent = temperature + " °C";
-        windText.textContent = wind + " km/h";
-
-        log("City: " + cityName);
-        log("Temperature: " + temperature + " °C");
-        log("Wind Speed: " + wind + " km/h");
-
-    } catch (error) {
-        log("Error: " + error.message);
-    }
-}
+});
